@@ -41,6 +41,17 @@
             android:orientation="horizontal"
             app:layout_constraintGuide_end="@dimen/activity_horizontal_margin"/>
 
+        <ImageView
+            android:id="@+id/iv_main_crystal"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            app:layout_constraintStart_toStartOf="@id/guideline_main_margin_start"
+            app:layout_constraintEnd_toEndOf="@id/guideline_main_margin_end"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/view_white_background"
+            app:srcCompat="@drawable/crystal_lime"
+            tools:ignore="ContentDescription" />
+
         <View
             android:id="@+id/view_white_background"
             android:layout_width="0dp"
