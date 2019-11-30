@@ -14,7 +14,8 @@ class MainActivity : AppCompatActivity() {
     private var listCrystals = CrystalData.listCrystals
     private var totalEarns = 0
     private var totalGems = 0
-    private var currentImage = listCrystals[0].imageId
+    private var currentCrystal = 0
+    private var currentImage = listCrystals[currentCrystal].imageId
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,6 +24,21 @@ class MainActivity : AppCompatActivity() {
         // Check SDK Version for enabling transparent Status Bar
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
             window.setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS)
+        }
+
+        setViewsToCurrent()
+
+        binding.ivMainCrystal.setOnClickListener { updateCurrentState() }
+    }
+
+    private fun updateCurrentState() {
+        totalGems++
+        totalEarns += listCrystals[currentCrystal].price
+
+        if (currentCrystal+1 < listCrystals.size &&
+                listCrystals[currentCrystal+1].startsAt <= totalEarns) {
+            currentCrystal++
+            currentImage = listCrystals[currentCrystal].imageId
         }
 
         setViewsToCurrent()
