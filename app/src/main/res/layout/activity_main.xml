@@ -9,6 +9,7 @@
         tools:context=".MainActivity">
 
         <ImageView
+            android:id="@+id/iv_main_background"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:scaleType="centerCrop"
@@ -18,6 +19,27 @@
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/cave"
             tools:ignore="ContentDescription" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_main_margin_start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="@dimen/activity_vertical_margin"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_main_margin_end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="@dimen/activity_vertical_margin"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_main_margin_bottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_end="@dimen/activity_horizontal_margin"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
