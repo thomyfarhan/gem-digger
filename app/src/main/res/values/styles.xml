@@ -8,4 +8,37 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="TextContent" parent="TextAppearance.AppCompat">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="TextContent.Small">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="TextContent.Medium">
+        <item name="android:textSize">24sp</item>
+    </style>
+
+    <style name="TextContent.Large">
+        <item name="android:textSize">34sp</item>
+    </style>
+
+    <style name="TextContent.Small.Black">
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="TextContent.Medium.Black">
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="TextContent.Large.Black">
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="TextContent.Large.Green">
+        <item name="android:textColor">@android:color/holo_green_light</item>
+    </style>
+
 </resources>
