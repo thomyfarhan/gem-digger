@@ -41,5 +41,47 @@
             android:orientation="horizontal"
             app:layout_constraintGuide_end="@dimen/activity_horizontal_margin"/>
 
+        <View
+            android:id="@+id/view_white_background"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/white_box"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_main_gems"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_main_total_gems"
+            style="@style/TextContent.Medium.Black"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_main_gems"
+            app:layout_constraintStart_toStartOf="@+id/guideline_main_margin_start"
+            android:text="@string/tv_main_total_gems_text"/>
+
+        <TextView
+            android:id="@+id/tv_main_gems"
+            style="@style/TextContent.Medium.Black"
+            android:paddingTop="@dimen/activity_half_vertical_margin"
+            app:layout_constraintBottom_toTopOf="@+id/tv_main_you_earns"
+            app:layout_constraintEnd_toEndOf="@+id/guideline_main_margin_end"
+            android:layout_marginBottom="@dimen/activity_half_vertical_margin"
+            android:text="@string/tv_main_gems_text"/>
+
+        <TextView
+            android:id="@+id/tv_main_you_earns"
+            style="@style/TextContent.Small.Black"
+            app:layout_constraintStart_toStartOf="@id/guideline_main_margin_start"
+            app:layout_constraintEnd_toEndOf="@+id/guideline_main_margin_end"
+            app:layout_constraintBottom_toTopOf="@+id/tv_main_earnings"
+            android:text="@string/tv_main_you_earns_text"/>
+
+        <TextView
+            android:id="@+id/tv_main_earnings"
+            style="@style/TextContent.Large.Green"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/guideline_main_margin_bottom"
+            android:text="@string/tv_main_earnings_text"/>
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
