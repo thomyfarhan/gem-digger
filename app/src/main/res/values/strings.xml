@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Gem Digger</string>
-    <string name="tv_main_earnings_text">$0</string>
+    <string name="tv_main_earnings_text">$%1$d</string>
+    <string name="tv_main_gems_text">%1$d %2$s</string>
     <string name="tv_main_you_earns_text">You Earns</string>
-    <string name="tv_main_total_gems_text">Total Gems</string>
-    <string name="tv_main_gems_text">0</string>
+    <string name="tv_main_total_gems_text">Bag</string>
 </resources>

@@ -11,6 +11,11 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
 
+    private var listCrystals = CrystalData.listCrystals
+    private var totalEarns = 0
+    private var totalGems = 0
+    private var currentImage = listCrystals[0].imageId
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
@@ -19,5 +24,18 @@ class MainActivity : AppCompatActivity() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
             window.setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS)
         }
+
+        setViewsToCurrent()
+    }
+
+    private fun setViewsToCurrent() {
+        binding.totalEarns = getString(R.string.tv_main_earnings_text, totalEarns)
+        binding.totalGems = if (totalGems > 1) {
+            getString(R.string.tv_main_gems_text, totalGems, "Gems")
+        } else {
+            getString(R.string.tv_main_gems_text, totalGems, "Gem")
+        }
+
+        binding.ivMainCrystal.setImageResource(currentImage)
     }
 }
