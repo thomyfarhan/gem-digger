@@ -29,6 +29,12 @@ class MainActivity : AppCompatActivity() {
             window.setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS)
         }
 
+        savedInstanceState?.let { bundle: Bundle ->
+            totalEarns = bundle.getInt(KEY_TOTAL_EARNS, 0)
+            totalGems = bundle.getInt(KEY_TOTAL_GEMS, 0)
+            currentCrystal = bundle.getInt(KEY_CURRENT_CRYSTAL, 0)
+        }
+
         setViewsToCurrent()
 
         binding.ivMainCrystal.setOnClickListener { updateCurrentState() }
