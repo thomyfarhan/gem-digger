@@ -56,4 +56,11 @@ class MainActivity : AppCompatActivity() {
 
         binding.ivMainCrystal.setImageResource(listCrystals[currentCrystal].imageId)
     }
+
+    override fun onSaveInstanceState(outState: Bundle) {
+        outState.putInt(KEY_TOTAL_GEMS, totalGems)
+        outState.putInt(KEY_TOTAL_EARNS, totalEarns)
+        outState.putInt(KEY_CURRENT_CRYSTAL, currentCrystal)
+        super.onSaveInstanceState(outState)
+    }
 }
