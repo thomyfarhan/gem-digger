@@ -7,6 +7,10 @@ import android.view.WindowManager
 import androidx.databinding.DataBindingUtil
 import com.aesthomic.gemdigger.databinding.ActivityMainBinding
 
+const val KEY_TOTAL_EARNS = "total_earns_key"
+const val KEY_TOTAL_GEMS = "total_gems_key"
+const val KEY_CURRENT_CRYSTAL = "current_crystal_key"
+
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
