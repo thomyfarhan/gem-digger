@@ -15,7 +15,6 @@ class MainActivity : AppCompatActivity() {
     private var totalEarns = 0
     private var totalGems = 0
     private var currentCrystal = 0
-    private var currentImage = listCrystals[currentCrystal].imageId
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -38,7 +37,6 @@ class MainActivity : AppCompatActivity() {
         if (currentCrystal+1 < listCrystals.size &&
                 listCrystals[currentCrystal+1].startsAt <= totalEarns) {
             currentCrystal++
-            currentImage = listCrystals[currentCrystal].imageId
         }
 
         setViewsToCurrent()
@@ -52,6 +50,6 @@ class MainActivity : AppCompatActivity() {
             getString(R.string.tv_main_gems_text, totalGems, "Gem")
         }
 
-        binding.ivMainCrystal.setImageResource(currentImage)
+        binding.ivMainCrystal.setImageResource(listCrystals[currentCrystal].imageId)
     }
 }
